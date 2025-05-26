@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import {
   Task,
   getTasks,
-  //addTask,  // Uncommented this import
+  addTask,  // Uncommented this import
   deleteTask,
   updateTask,
   getCurrentTask,
@@ -86,7 +86,11 @@ export default function Home() {
   // Handle adding new task
   const handleAddTask = (e: React.FormEvent) => {
     e.preventDefault();
-    //const task = addTask(newTask);
+    //disab;e esllint for the next line
+    // eslint-disable-next-line no-unused-vars
+    const task = addTask(newTask);
+    console.log(task, "Task added successfully");
+
     setTasks(getTasks());
     setTaskStats(getTaskStats());
     setNewTask({ title: "", startTime: "", endTime: "", priority: "high", status: "in-progress" });
