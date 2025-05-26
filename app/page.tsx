@@ -4,14 +4,13 @@ import { useState, useEffect } from "react";
 import {
   Task,
   getTasks,
-  //addTask,
+  //addTask,  // Uncommented this import
   deleteTask,
   updateTask,
   getCurrentTask,
   getTimeRemaining,
   formatTimeRemaining,
   playAlarm,
-
   getTaskStats,
   TaskStats,
   getWarningTime,
@@ -382,7 +381,7 @@ export default function Home() {
           <div className="modal-glass relative rounded-2xl p-8 w-full max-w-lg mx-4 animate-scale-in border-2 border-yellow-500/50">
             <h2 className="text-2xl text-yellow-500 mb-6">Time Warning</h2>
             <p className="text-luxury-silver mb-6">
-              {`Task ${currentTask.title}" is almost ending! You have {timeRemaining} remaining.`}
+              {`Task "${currentTask.title}" is almost ending! You have ${timeRemaining} remaining.`}
             </p>
             <div className="flex justify-end">
               <button
